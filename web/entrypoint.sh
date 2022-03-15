@@ -1,0 +1,5 @@
+#! /bin/sh
+
+export TEMPORAL_GRPC_ENDPOINT="$TEMPORAL_SERVER_HOST:$TEMPORAL_SERVER_PORT"
+
+exec "$@"

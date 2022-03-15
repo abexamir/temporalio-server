@@ -1,3 +1,6 @@
 FROM temporalio/web:1.14.0
 
+COPY web/entrypoint.sh /usr/app/entrypoint.sh
 COPY web/config.yaml /usr/app/server/config.yml
+
+ENTRYPOINT ["/usr/app/entrypoint.sh"]
