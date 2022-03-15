@@ -1,0 +1,12 @@
+auth:
+  enabled: false
+  providers:
+    - label: "OIDC Provider"
+      type: oidc
+      issuer: https://example.com
+      client_id: id
+      client_secret: secret
+      scope: openid profile email
+      audience: temporal 
+      callback_base_uri:
+      pass_id_token: false

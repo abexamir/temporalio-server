@@ -1,0 +1,3 @@
+FROM temporalio/web:1.14.0
+
+COPY web/config.yaml /usr/app/server/config.yml
