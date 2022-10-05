@@ -1,20 +1,22 @@
 frontend.enableClientVersionCheck:
 - value: true
   constraints: {}
-history.persistenceMaxQPS:
-- value: 3000
-  constraints: {}
-frontend.persistenceMaxQPS:
-- value: 3000
-  constraints: {}
-frontend.historyMgrNumConns:
-- value: 10
+frontend.keepAliveMaxConnectionAge:
+- value: 87600h # 10 years
+frontend.keepAliveTime:
+- value: 87600h # 10 years
+frontend.enablePersistencePriorityRateLimiting:
+- value: 200000
+frontend.persistenceGlobalMaxQPS:
+- value: 300000
   constraints: {}
 frontend.throttledLogRPS:
-- value: 20
+- value: 230
   constraints: {}
-history.historyMgrNumConns:
-- value: 50
+frontend.globalNamespaceRPS:
+- value: 912000
+history.persistenceGlobalMaxQPS:
+- value: 30000
   constraints: {}
 history.defaultActivityRetryPolicy:
 - value:
@@ -28,9 +30,3 @@ history.defaultWorkflowRetryPolicy:
     MaximumIntervalCoefficient: 100.0
     BackoffCoefficient: 2.0
     MaximumAttempts: 0
-system.advancedVisibilityWritingMode:
-  - value: "off"
-    constraints: {}
-limit.maxIDLength:
-  - value: 255
-    constraints: {}
