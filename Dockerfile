@@ -1,4 +1,4 @@
-FROM temporalio/auto-setup:1.15.2
+FROM temporalio/auto-setup:1.18.0
 
 ENV DYNAMIC_CONFIG_FILE_PATH /etc/temporal/config/config.yaml
 
